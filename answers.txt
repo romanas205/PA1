@@ -1,0 +1,10 @@
+1)
+The graph is in the GitHub directory along with the code. GitHub does not allow the creation/upload of empty folders, but they only contained original .csv files anyway, so I assume that is 
+not an issue. The graph shows a direct relationship, meaning that as file size increases, the transfer time also increases, but not by a constant factor. For instance, 
+when comparing the 10MB file to the 100MB file, we notice that the transfer speed (or the rate in MB/s) is not ten times greater but only about a factor of 2 greater. 
+We can also see that the transfer rate actually increases with larger files; for instance, the 50MB file is transferred at around 3.869 MB/s while 
+the 100MB file is transferred at around 4.250 MB/s. This also implies that the script is not as efficient for small files, as the setup takes more time than the actual transfer.
+
+2)
+The main two factors limiting the transfer rate of the script are the time required to establish the connection and the small buffer size, which limits how 
+many pieces messages can be broken into. This makes the transfer more efficient for larger files but does not provide consistency and/or predictability for smaller ones.
